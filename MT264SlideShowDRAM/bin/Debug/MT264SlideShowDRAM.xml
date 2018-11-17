@@ -1,0 +1,118 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MT264SlideShowDRAM
+</name>
+</assembly>
+<members>
+<member name="T:MT264SlideShow1.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:MT264SlideShow1.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:MT264SlideShow1.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:MT264SlideShow1.MainForm.zoomButton_Click(System.Object,System.EventArgs)">
+ Preconditions: The text needs to be loaded.
+ Postconditions: The size of the font has been increased by 4
+</member>
+<member name="M:MT264SlideShow1.MainForm.PrintDocument1_PrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)">
+ Preconditions: None.
+ Postconditions: Takes the current images and applies it to the print preview page, which is what the user want to print.
+</member>
+<member name="M:MT264SlideShow1.Slide.#ctor">
+ <summary>
+ A new instance of Slide is created with ImageLocation and 
+ Text set to the empty string.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:MT264SlideShow1.Slide.#ctor(System.String,System.String)">
+ <summary>
+ A new instance of Slide is created with ImageLocation and 
+ Text set to loc and desc respectively.
+ </summary>
+ <param name="loc"></param>
+ <remarks></remarks>
+</member>
+<member name="M:MT264SlideShow1.SlideShowAdmin.#ctor">
+ <summary>
+ An instance of SlideShowAdmin is created with the list of slides
+ set to a new empty list of slides and Current set to 0.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:MT264SlideShow1.SlideShowAdmin.CurrentImage">
+ <summary>
+ Preconditions: none
+ Postconditions: If the list of slides is not empty, an attempt is made to return
+ the image from the current slide. If the list is empty or the attempt fails,
+ Nothing is returned.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:MT264SlideShow1.SlideShowAdmin.CurrentText">
+ <summary>
+ Preconditions: none
+ Postconditions: The text from the current slide is returned. If the list of
+ slides is empty then the empty string is returned.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:MT264SlideShow1.SlideShowAdmin.firstSlide">
+ <summary>
+ Preconditions: none
+ Postconditions: Current is set to 0.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:MT264SlideShow1.SlideShowAdmin.nextSlide">
+ <summary>
+ Preconditions: none
+ Postconditions: If Current + 1 is less than the number of slides,
+ Current is incremented by 1. Otherwise nothing is done.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:MT264SlideShow1.SlideShowAdmin.previousSlide">
+ <summary>
+ Preconditions: none
+ Postconditions: If Current is greater than zero then 
+ Current is decremented by 1. Otherwise nothing is done.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:MT264SlideShow1.SlideShowAdmin.drawSlide(System.Drawing.Graphics)">
+ <summary>
+ Preconditions: CurrentImage is not Nothing.
+ Postconditions: CurrentImage is drawn on g. For further details, see Q3(a).
+ </summary>
+ <param name="g"></param>
+ <remarks></remarks>
+</member>
+<member name="M:MT264SlideShow1.SlideShowAdmin.openSlideShow(System.String)">
+ <summary>
+ Preconditions: none
+ Postconditions: An attempt is made to open the slide show found at filename.
+ If successful, Current is set to 0.
+ If the attempt fails, an exception is thrown.
+ </summary>
+ <param name="fileName"></param>]
+ <remarks></remarks>
+</member>
+</members>
+</doc>
